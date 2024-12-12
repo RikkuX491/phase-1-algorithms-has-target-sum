@@ -1,13 +1,43 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  if(array.length < 2){
+    return false
+  }
+
+  for(let i = 0; i < array.length; i++){
+    for(let j = i + 1; j < array.length; j++){
+      if(array[i] + array[j] === target){
+        return true
+      }
+    }
+  }
+
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
   Add your pseudocode here
+  function hasTargetSum(array, target) {
+    if array length is less than 2 {
+      return false
+    }
+    
+    for(let i = 0; i < array length; i++){
+      for(let j = i + 1; j < array length; j++){
+        if array index i + array index j === target {
+          return true
+        }
+      }
+    }
+
+    if no sum was found, then return false...
+    return false
+  }
 */
 
 /*
